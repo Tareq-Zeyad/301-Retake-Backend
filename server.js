@@ -27,7 +27,9 @@ server.put('/updateData/:id', UpdateDataHandler);
 main().catch(err => console.log(err));
 
 async function main() {
-  await mongoose.connect('mongodb://localhost:27017/301Retake');
+//   await mongoose.connect('mongodb://localhost:27017/301Retake');
+  await mongoose.connect('mongodb://FruitsBasket:199624@cluster0-shard-00-00.dpyre.mongodb.net:27017,cluster0-shard-00-01.dpyre.mongodb.net:27017,cluster0-shard-00-02.dpyre.mongodb.net:27017/programmings?ssl=true&replicaSet=atlas-a6ifku-shard-0&authSource=admin&retryWrites=true&w=majority');
+
 
   const LangSchema = new Schema({
     title: String,
